@@ -1,0 +1,40 @@
+[tool.ruff]
+src = ["src", "tests", "pyproject.toml"]
+
+[tool.ruff.format]
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D1",   # missing docstrings
+    "S101", # assert
+    # taken from https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",   # tab-indentation
+    "E111",   # indentation-with-invalid-multiple
+    "E114",   # indentation-with-invalid-multiple-comment
+    "E117",   # over-indented
+    "D206",   # indent-with-spaces
+    "D300",   # triple-single-quotes
+    "Q000",   # bad-quotes-inline-string
+    "Q001",   # bad-quotes-multiline-string
+    "Q002",   # bad-quotes-docstring
+    "Q003",   # avoidable-escaped-quote
+    "COM812", # missing-trailing-comma
+    "COM819", # prohibited-trailing-comma
+]
+# Definetly configure ruff.lint.logger-objects if applicable.
+# See https://docs.astral.sh/ruff/settings/#lint_logger-objects for more info.
+# logger-objects = ["logging_setup.logger"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+# Ruff will automatically disable any conflicting rules when ALL is enabled,
+# e.g. D203 and D211 as they represent alternative docstring formats. Picking
+# any convention will enable the rules for that particular convention.
+# See https://docs.astral.sh/ruff/linter/#rule-selection and
+# https://docs.astral.sh/ruff/settings/#lintpydocstyle for more info.
+convention = "google"

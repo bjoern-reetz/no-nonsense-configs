@@ -5,3 +5,4 @@ This repo contains opinionated configs for some tools I use for software develop
 ## Tools with configs
 
 * [Pyright](./pyright/README.md)
+* [Ruff](./ruff/README.md)
