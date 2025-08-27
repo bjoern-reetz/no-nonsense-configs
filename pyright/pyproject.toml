@@ -1,0 +1,19 @@
+[tool.pyright]
+include = ["src", "tests"]
+typeCheckingMode = "strict"
+# Make Pyright generate errors if the source code makes use of language
+# features that are not supported in that version
+pythonVersion = "3.13"
+pythonPlatform = "All"
+deprecateTypingAliases = false # use ruff UP006 instead
+# reportCallInDefaultInitializer = "warning"  # use ruff B008 instead
+reportImplicitOverride = "warning"
+# reportImplicitStringConcatenation = "warning"  # use ruff ISC instead
+reportImportCycles = "warning"
+reportMissingSuperCall = "warning"
+reportPropertyTypeMismatch = "warning"
+# reportShadowedImports = "warning"  # use ruff A0 instead
+reportUninitializedInstanceVariable = "warning"
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportUnreachable = "warning"
+reportUnusedCallResult = "warning"
